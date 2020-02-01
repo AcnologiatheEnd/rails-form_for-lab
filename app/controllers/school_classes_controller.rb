@@ -21,6 +21,7 @@ class SchoolClassesController < ApplicationController
   # depending on the controller action. This
   # should come after the other methods
 	def post_params(*args)
+	  binding.pry
 	  params.permit(*args)
 	end
 end
