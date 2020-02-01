@@ -12,6 +12,7 @@ class SchoolClassesController < ApplicationController
   def show 
     	@school_class = SchoolClass.find(params[:id])
   end
+ 
   private
 	
 	# We pass the permitted fields in as *args;
