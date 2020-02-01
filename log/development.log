@@ -610,3 +610,12 @@ Redirected to http://157.230.220.151:51868/school_classes/6
 Completed 302 Found in 17ms (ActiveRecord: 5.8ms)
 
 
+Started GET "/school_classes/6" for 73.198.209.174 at 2020-02-01 08:37:08 +0000
+Processing by SchoolClassesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mSchoolClass Load (0.2ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering school_classes/show.html.erb within layouts/application
+  Rendered school_classes/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 0.2ms)
+
+
