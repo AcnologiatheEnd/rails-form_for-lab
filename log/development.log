@@ -562,3 +562,6 @@ Processing by SchoolClassesController#show as HTML
   [1m[36mSchoolClass Load (0.3ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
   Rendering school_classes/show.html.erb within layouts/application
   Rendered school_classes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
