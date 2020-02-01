@@ -688,3 +688,17 @@ rack (2.0.8) lib/rack/handler/webrick.rb:86:in `service'
   Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/actionpack-5.0.7.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.6ms)
+Started PATCH "/school_classes/6" for 73.198.209.174 at 2020-02-01 08:48:57 +0000
+Processing by SchoolClassesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5naQ/vXpp8Spq5/UwQDVTKmWnaxqs1WEi5d8wk4AZqLYRK/zc07oIEB+CVLfRbG6rGfKa3ra+Ff1tFnzROZ3eA==", "school_class"=>{"title"=>"cool", "room_number"=>"4"}, "commit"=>"Submit class", "id"=>"6"}
+  [1m[36mSchoolClass Load (0.1ms)[0m  [1m[34mSELECT  "school_classes".* FROM "school_classes" WHERE "school_classes"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "school_classes" SET "room_number" = ?, "updated_at" = ? WHERE "school_classes"."id" = ?[0m  [["room_number", "4"], ["updated_at", "2020-02-01 08:48:57.974670"], ["id", 6]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 5.8ms)
+
+
+  
+NoMethodError (undefined method `post_path' for #<SchoolClassesController:0x00007f61e870c208>):
+  
+app/controllers/school_classes_controller.rb:23:in `update'
